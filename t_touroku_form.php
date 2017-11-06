@@ -1,19 +1,19 @@
 <html>
-<head><title>ŒÚ‹q“o˜^ƒtƒH[ƒ€</title></head>
+<head><title>é¡§å®¢ç™»éŒ²ãƒ•ã‚©ãƒ¼ãƒ </title></head>
 <body>
 <form  method="POST" action="t_touroku_form.php">
-–¼‘O:<input type="text" name="name">
-Ý’uêŠî•ñ:<input type="text" name="basyo">
-i’»:<input type="text" name="sinntyoku">
+åå‰:<input type="text" name="name">
+è¨­ç½®å ´æ‰€æƒ…å ±:<input type="text" name="basyo">
+é€²æ—:<input type="text" name="sinntyoku">
 <?php echo '<br>'; ?>
-‘¾—zŒõ”­“dƒVƒXƒeƒ€‚ÌÚ×<input type="text" name="syousai">
+å¤ªé™½å…‰ç™ºé›»ã‚·ã‚¹ãƒ†ãƒ ã®è©³ç´°<input type="text" name="syousai">
 <?php echo '<br>'; ?>
-”­“dŠJŽn“ú<input type="text" name="start">
-”„“d‰¿Ši<input type="text" name="value">
+ç™ºé›»é–‹å§‹æ—¥<input type="text" name="start">
+å£²é›»ä¾¡æ ¼<input type="text" name="value">
 <?php echo '<br>'; ?>
-ƒƒ“ƒeƒiƒ“ƒXƒvƒ‰ƒ“<input type="text" name="plan">
-<input type="hidden" name="login" value="1";>
-<input type="submit" name"btn1" value="“o˜^">
+ãƒ¡ãƒ³ãƒ†ãƒŠãƒ³ã‚¹ãƒ—ãƒ©ãƒ³<input type="text" name="plan">
+<input type="hidden" name="login" value="1">
+<input type="submit" name"btn1" value="ç™»éŒ²">
 </form>
 </body>
 <?php
@@ -28,7 +28,7 @@ $start = $_POST['start'];
 $value = $_POST['value'];
 $plan = $_POST['plan'];
 
-////////DBÚ‘±î•ñ//////////////////////////////////
+////////DBæŽ¥ç¶šæƒ…å ±//////////////////////////////////
 $user = 
 $pass = 
 $pdo = 
@@ -38,7 +38,7 @@ $sql = "INSERT INTO CUSTOMER1(id,name,basyo,sinntyoku,syousai,start,value,plan,m
 	$stmt = $pdo->prepare($sql);
 	$params = array(':id' => "$id",':name' => "$name",':basyo' => "$basyo",':sinntyoku' => "$sinntyoku",':syousai' => "$syousai",':start' => "$start",':value' => "$value",':plan' => "$plan",':mokusi' => "0",':suuti' => "0",':kaketuke' => "0");
 	$stmt -> execute($params);
-echo "ŒÚ‹qî•ñ‚Ì“o˜^‚ªŠ®—¹‚µ‚Ü‚µ‚½";
+echo "é¡§å®¢æƒ…å ±ã®ç™»éŒ²ãŒå®Œäº†ã—ã¾ã—ãŸ";
 echo "<br>";
-echo "<a href=\"t_itirann.php?date=$x\">ˆê——‚Ö</a>";
+echo "<a href=\"t_itirann.php?date=$x\">ä¸€è¦§ã¸</a>";
 }
